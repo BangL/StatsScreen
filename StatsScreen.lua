@@ -340,7 +340,8 @@ function StatsScreen:_build()
     -- characters
     self:_add_heading(loc("ss_characters"))
     for _, entry in ipairs(sorted_entries(sessions.characters, function(v) return v end)) do
-        self:_add_row({ prettify(entry.id), number(entry.value) })
+        local loc_id = "ss_character_" .. entry.id
+        self:_add_row({ managers.localization:exists(loc_id) and loc(loc_id) or prettify(entry.id), number(entry.value) })
     end
 end
 

@@ -50,5 +50,9 @@
     "ss_enemy_german_heavy": "Heavy Trooper",
     "ss_enemy_german_light": "Light Trooper",
     "ss_enemy_soviet_nkvd_int_security_captain": "NKVD Security Captain",
-    "ss_enemy_other": "Other"
+    "ss_enemy_other": "Other",
+    "ss_character_american": "Sterling (American)",
+    "ss_character_british": "Rivet (British)",
+    "ss_character_german": "Wolfgang (German)",
+    "ss_character_russian": "Kurgan (Russian)"
 }
