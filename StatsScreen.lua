@@ -326,7 +326,9 @@ function StatsScreen:_build()
     end
     for _, entry in ipairs(sorted_entries(levels, function(v) return v.started or 0 end)) do
         local level = entry.value
-        if not tostring(entry.id):find("^fake_mission") then
+        -- the game keeps an (empty) entry for every level it knows, e.g. custom raids: only list the ones played
+        local played = (level.started or 0) > 0 or (level.completed or 0) > 0 or (level.quited or 0) > 0
+        if played and not tostring(entry.id):find("^fake_mission") then
             self:_add_row({
                 level_name(entry.id),
                 number(level.started),
