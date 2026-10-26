@@ -348,8 +348,10 @@ function StatsScreen:_build()
 end
 
 function StatsScreen:close()
-    self._root_panel:clear()
-    self._root_panel.ctrls = {}
+    if alive(self._root_panel) then
+        self._root_panel:clear()
+        self._root_panel.ctrls = {}
+    end
 end
 
 --------------------------------------------------------------------------------
