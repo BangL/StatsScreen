@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<mod name="Stats Screen"
+<mod name="Stats Screen" image="icon.png"
 	description="Adds a lifetime statistics screen (kills, weapons, accuracy, missions, play time) to the Raid menu"
 	author="BangL"
 	color="60 60 60"
