@@ -152,7 +152,7 @@ function StatsScreen:_layout()
     self._content = self._scroll:get_panel()
     self._blocks = {}
 
-    local ok, err = pcall(function()
+    local ok, err = blt.pcall(function()
         self:_build()
         self:_place_blocks()
     end)
